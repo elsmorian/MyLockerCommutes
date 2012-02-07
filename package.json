@@ -1,0 +1,32 @@
+{
+  "author": "Chris Elsmore <elsmorian@gmail.com>",
+  "name": "hellocommutes",
+  "description": "A simple way to view your commutes on a map.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/elsmorian",
+  "repository": {
+    "type": "app",
+    "title": "Basic Commutes",
+    "status": "unstable",
+    "static": true,
+    "handle": "HelloCommutes",
+    "uses": {
+      "services": [
+        "twitter",
+        "foursquare",
+        "instagram"
+      ],
+      "types": [
+        "places"
+      ]
+    },
+    "update": true,
+    "github": "https://github.com/elsmorian",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.4.9"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
