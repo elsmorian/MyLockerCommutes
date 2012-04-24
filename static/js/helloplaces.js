@@ -38,6 +38,7 @@ function gotPlaces(places) {
 $(function() {
     console.log("DOM DONE!");
     getState(printState);
+    queryplaces('me:true', 20, 0, '','', printState);
 });
 
 function printState(state){
