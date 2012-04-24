@@ -39,7 +39,7 @@ $(function() {
     console.log("DOM DONE!");
     getState(printState);
     //{'terms':terms, 'limit':limit, 'offset':offset, 'sort':sort, 'fields':fields},
-    queryPlaces({'terms':'[me:true]', 'limit':20} printState);
+    queryPlaces({'terms':'[me:true]', 'limit':20}, printState);
 });
 
 function printState(state){
