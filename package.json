@@ -12,9 +12,8 @@
     "handle": "HelloCommutes",
     "uses": {
       "services": [
-        "twitter",
+        "glatitute",
         "foursquare",
-        "instagram"
       ],
       "types": [
         "places"

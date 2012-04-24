@@ -7,8 +7,8 @@
   <title>Hello Commutes!</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <meta name="description" content="The hello world of commutes for the locker project.">
-  <meta name="author" content="Singly">
+  <meta name="description" content="Plot Commutes.">
+  <meta name="author" content="Chris Elsmore">
 
   <style type="text/css" media="screen">
     html, body {
@@ -24,17 +24,82 @@
       box-sizing: border-box;
       height: 100%;
     }
+    
+    #controls{
+       height: 400px; 
+    }
+    #services{
+        min-height: 50px;
+    }
+    #myJson{
+        min-height: 200px;
+    }
+    #startDatePicker, #endDatePicker{
+        float: left;
+    }
   </style>
 
   <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.19.custom.css">
+  <link rel="stylesheet" href="css/960.css">
 
-  <script src="/static/js/jquery-1.6.2.min.js"></script>
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery-ui-1.8.19.custom.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script src="js/helloplaces.js" type="text/javascript"></script>
-  <script src="js/moment.min.js" type="text/javascript"></script>
+  <script src="js/CommuteController.js" type="text/javascript"></script>
+  <script src="js/LockerPlaces.js" type="text/javascript"></script>
 </head>
 
+
 <body>
-  <div id="queries"></div>
+  <div class="container container_12">
+    <div class='grid_4' id="services">
+        <h2>Services</h2>
+        <input type="checkbox" id="4sqButton"></input><label for="4sqButton"><img style="margin: 5px;" src="img/foursquare.png"/><p>Foursquare</p></label>
+        <input type="checkbox" id="latButton"></input><label for="latButton"><img style="margin: 5px;" src="img/glatitude.png"/><p>Google Latitude</p></label>
+    </div>
+    <div class='grid_4'>
+        <h2>Start</h2>
+        <div style="margin:10px;" id="startDatePicker"></div>
+    </div>
+    <div class='grid_4'>
+        <h2>End</h2>
+        <div style="margin:10px;" id="endDatePicker"></div>
+    </div>
+    
+    <div class='clear'></div>
+    <div class='grid_12'>
+        <button id="goButton">GO!</button>
+    </div>
+    <div class='clear'></div>
+    <hr/>
+    <div class='grid_12' id="myJson">
+        <p>JSON</p>
+    </div>
+  </div>
+</body>
+<!--<body>
+  <div id="app">
+    <div style="display:block;" id="controls">
+      <div style="display:block;" id="services">
+        <h2>Services</h2>
+      </div>
+      <div style="display:block;" id="dates">
+        <h2>Dates</h2>
+        <div style="margin:5px 50px; float: left;" id="startDate">
+            <h3 style="float: left;">Start:</h3>
+            <div style="margin:10px;" id="startDatePicker"></div>
+        </div>
+        <div style="margin:5px 50px; float: left;" id="endDate">
+            <h3 style="float: left;">End:</h3>
+            <div style="margin:10px;" id="endDatePicker"></div>
+        </div>
+      </div>
+    </div>
+    <hr style="display:block;" />
+    <div style="display:block;" id="myJson">
+    </div>
+  </div>
 </body>
 </html>
+-->
