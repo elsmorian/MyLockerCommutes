@@ -1,6 +1,6 @@
 /* Generic log function for debugging. */
 var log = function(msg) { if (console && console.log) console.debug(msg); }
-window.onload = loadFunct;
+//window.onload = loadFunct;
 
 function getPlaces(offset, limit, mysort, myterms) {
     $.getJSON(
@@ -24,7 +24,7 @@ function gotPlaces(places) {
         place = places[i];
         place.at = new Date(place.at);
     }
-    console.log(places);
+    log(places);
 }
 
 //function loadScript() {
@@ -37,4 +37,23 @@ function gotPlaces(places) {
 
 $(function() {
     console.log("DOM DONE!");
+    getState(printState);
 });
+
+function printState(state){
+    console.log(state);
+}
+
+function queryPlaces(terms, limit, offset, sort, fields, callback) {
+    $.getJSON('/query/getPlace',
+        {'terms':terms, 'limit':limit, 'offset':offset, 'sort':sort, 'fields':fields},
+        callback);
+}
+
+function getState(callback) {
+    $.getJSON('/Me/places/state', callback);
+}
+
+function getPlaces(limit, offset, callback) {
+    $.getJSON('/Me/places/',{'limit':limit, 'offset':offset}, callback);
+}
