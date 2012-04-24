@@ -38,17 +38,17 @@ function gotPlaces(places) {
 $(function() {
     console.log("DOM DONE!");
     getState(printState);
-    queryPlaces('[me:true]', 20, 0, '','', printState);
+    //{'terms':terms, 'limit':limit, 'offset':offset, 'sort':sort, 'fields':fields},
+    queryPlaces({'terms':'[me:true]', 'limit':20} printState);
 });
 
 function printState(state){
     console.log(state);
 }
 
-function queryPlaces(terms, limit, offset, sort, fields, callback) {
-    $.getJSON('/query/getPlace',
-        {'terms':terms, 'limit':limit, 'offset':offset, 'sort':sort, 'fields':fields},
-        callback);
+function queryPlaces(ops, callback) {
+    //{'terms':terms, 'limit':limit, 'offset':offset, 'sort':sort, 'fields':fields},
+    $.getJSON('/query/getPlace', ops, callback);
 }
 
 function getState(callback) {
