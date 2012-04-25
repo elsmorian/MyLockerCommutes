@@ -44,11 +44,11 @@ function getData(){
     if (offsetNum !== ''){
         req.offset = offsetNum;
     }
-    var sDate = jQuery("#startDatePicker").datepicker( "getDate" ).getTime();
-    var eDate = jQuery("#endDatePicker").datepicker( "getDate" ).getTime();
+    //var sDate = jQuery("#startDatePicker").datepicker( "getDate" ).getTime();
+    //var eDate = jQuery("#endDatePicker").datepicker( "getDate" ).getTime();
     req.terms = "[me:true,at:1302440989000-]"
     console.log(req);
-    console.log(sDate);
-    console.log(eDate);
+    //console.log(sDate);
+    //console.log(eDate);
     queryPlaces(req, printDataToScreen);
 }
