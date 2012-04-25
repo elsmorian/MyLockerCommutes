@@ -48,6 +48,6 @@ function getData(){
     req.terms = "[me:true,at:1302440989000-]"
     console.log(req);
     console.log(sDate);
-    console.log(edate);
+    console.log(eDate);
     queryPlaces(req, printDataToScreen);
 }
