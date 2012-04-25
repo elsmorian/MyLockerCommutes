@@ -55,8 +55,8 @@
   <div class="container container_12">
     <div class='grid_4' id="services">
         <h2>Services</h2>
-        <input type="checkbox" id="4sqButton"></input><label for="4sqButton"><img style="margin: 5px;" src="img/foursquare.png"/><p>Foursquare</p></label>
-        <input type="checkbox" id="latButton"></input><label for="latButton"><img style="margin: 5px;" src="img/glatitude.png"/><p>Google Latitude</p></label>
+        <input type="checkbox" id="4sqButton"></input><label for="4sqButton"><img style="margin: 5px;" src="img/foursquare.png"/></label>
+        <input type="checkbox" id="latButton"></input><label for="latButton"><img style="margin: 5px;" src="img/glatitude.png"/></label>
     </div>
     <div class='grid_4'>
         <h2>Start</h2>
@@ -66,40 +66,16 @@
         <h2>End</h2>
         <div style="margin:10px;" id="endDatePicker"></div>
     </div>
-    
-    <div class='clear'></div>
     <div class='grid_12'>
-        <button id="goButton">GO!</button>
+        <hr/>
+        <input type="text" id="limitNum" maxlength="5" size="5"><label for="limitNum">Limit</label>
+        <input type="text" id="offsetNum" maxlength="5" size="5"><label for="offsetNum">Offset</label>
+        <button id="goButton" onclick="getData()">GO!</button>
+        <hr/>
     </div>
     <div class='clear'></div>
-    <hr/>
-    <div class='grid_12' id="myJson">
+    <div class='grid_12' id="myData">
         <p>JSON</p>
     </div>
   </div>
 </body>
-<!--<body>
-  <div id="app">
-    <div style="display:block;" id="controls">
-      <div style="display:block;" id="services">
-        <h2>Services</h2>
-      </div>
-      <div style="display:block;" id="dates">
-        <h2>Dates</h2>
-        <div style="margin:5px 50px; float: left;" id="startDate">
-            <h3 style="float: left;">Start:</h3>
-            <div style="margin:10px;" id="startDatePicker"></div>
-        </div>
-        <div style="margin:5px 50px; float: left;" id="endDate">
-            <h3 style="float: left;">End:</h3>
-            <div style="margin:10px;" id="endDatePicker"></div>
-        </div>
-      </div>
-    </div>
-    <hr style="display:block;" />
-    <div style="display:block;" id="myJson">
-    </div>
-  </div>
-</body>
-</html>
--->
