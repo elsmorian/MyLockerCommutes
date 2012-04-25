@@ -41,8 +41,8 @@ function getData(){
     if (offsetNum !== ''){
         req.offset = offsetNum;
     }
-    var sDate = $("#startDatePicker").datepicker( "getDate" );
-    var eDate = $("#endDatePicker").datepicker( "getDate" );
+    var sDate = $("#startDatePicker").datepicker( "getDate" ).getTime();
+    var eDate = $("#endDatePicker").datepicker( "getDate" ).getTime();
     req.terms = "[me:true,at:1302440989000-]"
     console.log(req);
     queryPlaces(req, printDataToScreen);
