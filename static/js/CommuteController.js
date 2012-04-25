@@ -42,7 +42,7 @@ function getData(){
     }
     var sDate = $("#startDatePicker").datepicker("getDate");
     var eDate = $("#endDatePicker").datepicker("getDate");
-    req.terms = "[me:true, at:1302440989000-]"
+    req.terms = "[me:true,at:1302440989000-]"
     console.log(req);
     queryPlaces(req, printDataToScreen);
 }
