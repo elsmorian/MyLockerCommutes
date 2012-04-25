@@ -29,6 +29,7 @@ function printState(state){
 }
 
 function printDataToScreen(data){
+    console.log("Returned Data:");
     console.log(data);
     jQuery("#myData").html(data);
 }
