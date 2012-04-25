@@ -27,6 +27,7 @@ function printState(state){
 }
 
 function printDataToScreen(data){
+    console.log(data);
     $("#myData").html(data);
 }
 
@@ -40,8 +41,8 @@ function getData(){
     if (offsetNum !== ''){
         req.offset = offsetNum;
     }
-    var sDate = $("#startDatePicker").datepicker("getDate");
-    var eDate = $("#endDatePicker").datepicker("getDate");
+    req.sDate = $("#startDatePicker").datepicker( "getDate" );
+    req.eDate = $("#endDatePicker").datepicker( "getDate" );
     req.terms = "[me:true,at:1302440989000-]"
     console.log(req);
     queryPlaces(req, printDataToScreen);
